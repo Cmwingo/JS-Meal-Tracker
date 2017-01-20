@@ -14,7 +14,10 @@ import { Meal } from './meal.model';
 })
 
 export class AppComponent {
-  masterMealList: Meal[] = [new Meal('Latte', 'Great way to start the day', 150)];
+  masterMealList: Meal[] = [
+    new Meal('Latte', 'Great way to start the day', 150),
+    new Meal('Cheese Danish', 'An indulgence for sure', 550)
+  ];
   selectedMeal: Meal = null;
 
   addMeal(newMeal: Meal) {
