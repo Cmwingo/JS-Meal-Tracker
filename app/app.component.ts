@@ -22,12 +22,9 @@ export class AppComponent {
     new Meal('Mac & Cheese', "Good snack", 300)
   ];
   selectedMeal: Meal = null;
-  dailyCalories: number = 700;
-  avgCalories: number = this.dailyCalories / this.masterMealList.length;
+  dailyCalories: number = 1000;
 
   addMeal(newMeal: Meal) {
-    console.log(typeof this.dailyCalories);
-    console.log(typeof newMeal.calories);
 
     this.dailyCalories += parseFloat(newMeal.calories.toString());
     this.masterMealList.push(newMeal);
@@ -38,6 +35,12 @@ export class AppComponent {
   }
 
   finishedEditing() {
+  let calories: number = 0;
+    for(let meal of this.masterMealList) {
+      calories += parseFloat(meal.calories.toString());
+      console.log(calories);
+    }
+    this.dailyCalories = calories;
     this.selectedMeal = null;
   }
 }
