@@ -1,14 +1,20 @@
 import { Component } from '@angular/core';
+import { Meal } from './meal.model';
 
 @Component({
   selector: 'app-root',
   template: `
   <div class="container">
-    <h1>My First Angular 2 App</h1>
+    <h1>Meal Tracker</h1>
+    <new-meal (newMealSender)="addMeal($event)"></new-meal>
   </div>
   `
 })
 
 export class AppComponent {
+  masterMealList: Meal[] = [];
 
+  addMeal(newMeal: Meal) {
+    this.masterMealList.push(newMeal);
+  }
 }
