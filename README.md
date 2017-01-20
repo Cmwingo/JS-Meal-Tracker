@@ -13,8 +13,6 @@ You will need the following things properly installed on your computer.
 * [Bower](https://bower.io/)
 * [TypeScript](https://www.typescriptlang.org/)
 
-
-
 ## Installation
 
 * `git clone <repository-url>` this repository
