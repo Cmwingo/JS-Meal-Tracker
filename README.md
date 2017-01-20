@@ -12,7 +12,6 @@ You will need the following things properly installed on your computer.
 * [Node.js](https://nodejs.org/) (with NPM)
 * [Bower](https://bower.io/)
 * [TypeScript](https://www.typescriptlang.org/)
-)
 
 
 ## Installation
