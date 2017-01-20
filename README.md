@@ -29,7 +29,7 @@ You will need the following things properly installed on your computer.
 ### Building
 
 * `gulp build`
-* `ember build --production` (production)
+* `gulp build --production` (production)
 
 ## Known Bugs
 
