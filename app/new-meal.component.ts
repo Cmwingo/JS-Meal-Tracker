@@ -9,12 +9,8 @@ import { Meal } from './meal.model';
     <div class="form-group">
       <label>Enter Meal Name:</label>
       <input #newName class="form-control">
-    </div>
-    <div>
       <label>Enter Meal Details:</label>
       <input #newDetails class="form-control">
-    </div>
-    <div>
       <label>Enter Meal Calories:</label>
       <input #newCalories class="form-control">
     </div>

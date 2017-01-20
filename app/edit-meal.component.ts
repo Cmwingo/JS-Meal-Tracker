@@ -9,17 +9,13 @@ import { Meal } from './meal.model';
           <h3>{{childSelectedMeal.name}} {{childSelectedMeal.brand}}</h3>
           <hr>
           <h3>Edit Meal</h3>
-          <div>
+          <div class="form-group">
             <label>Enter Meal Name:</label>
-            <input [(ngModel)]="childSelectedMeal.name"><br>
-          </div>
-          <div>
+            <input [(ngModel)]="childSelectedMeal.name" class="form-control"><br>
             <label>Enter Meal Details:</label>
-            <input [(ngModel)]="childSelectedMeal.details"><br>
-          </div>
-          <div>
+            <input [(ngModel)]="childSelectedMeal.details" class="form-control"><br>
             <label>Enter Meal Calories:</label>
-            <input [(ngModel)]="childSelectedMeal.calories"><br>
+            <input [(ngModel)]="childSelectedMeal.calories" class="form-control"><br>
           </div>
           <button (click)="doneButtonClicked()">Done</button>
         </div>

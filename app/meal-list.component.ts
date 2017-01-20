@@ -9,7 +9,7 @@ import { Meal } from './meal.model';
     <option value="lowCalorie">Low Calorie Meals</option>
     <option value="highCalorie">High Calorie Meals</option>
   </select>
-
+  <h3>Your Meals</h3>
   <div *ngFor="let currentMeal of childMealList | calories:filterByCalories" class="panel panel-default">
     <div class="panel-heading">{{currentMeal.name}} Calories: {{currentMeal.calories}}</div>
     <div class="panel-body">{{currentMeal.details}}</div>
