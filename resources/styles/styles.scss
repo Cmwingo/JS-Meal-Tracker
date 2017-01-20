@@ -1,3 +1,42 @@
 select {
   margin-bottom: 5px;
+  color: black;
+}
+
+.title {
+  font-size: 400%;
+  text-align: center;
+}
+
+body {
+background-color: rgb(115, 104, 157);
+font-family: 'Archivo Narrow', sans-serif;
+color: rgb(203, 198, 196);
+}
+
+.panel-body {
+  background-color: rgb(169, 166, 223);
+  color: black;
+}
+
+.panel-head-text {
+  font-size: 150%;
+}
+
+.jumbotron {
+  background-image: url("/resources/images/bad_food_vs_good_food.jpg");
+  background-size: contain;
+  height: 250px;
+}
+
+input {
+  color: black;
+}
+
+button {
+  color: black;
+}
+
+label {
+  font-size: 150%;
 }
