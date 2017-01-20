@@ -18,7 +18,8 @@ import { Meal } from './meal.model';
 export class AppComponent {
   masterMealList: Meal[] = [
     new Meal('Latte', 'Great way to start the day', 150),
-    new Meal('Cheese Danish', 'An indulgence for sure', 550)
+    new Meal('Cheese Danish', 'An indulgence for sure', 550),
+    new Meal('Mac & Cheese', "Good snack", 300)
   ];
   selectedMeal: Meal = null;
   dailyCalories: number = 700;

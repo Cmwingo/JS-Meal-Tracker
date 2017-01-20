@@ -10,10 +10,24 @@ import { Meal } from './meal.model';
     <option value="highCalorie">High Calorie Meals</option>
   </select>
   <h3>Your Meals</h3>
-  <div *ngFor="let currentMeal of childMealList | calories:filterByCalories" class="panel panel-default">
-    <div class="panel-heading">{{currentMeal.name}} Calories: {{currentMeal.calories}}</div>
-    <div class="panel-body">{{currentMeal.details}}</div>
-    <button class="edit-button"(click)="editButtonHasBeenClicked(currentMeal)">Edit!</button>
+  <div *ngFor="let currentMeal of childMealList | calories:filterByCalories" class="meal-list">
+    <div *ngIf="currentMeal.calories > 500" class="panel panel-danger">
+      <div class="panel-heading">{{currentMeal.name}} Calories: {{currentMeal.calories}}</div>
+      <div class="panel-body">{{currentMeal.details}}</div>
+      <button class="edit-button"(click)="editButtonHasBeenClicked(currentMeal)">Edit!</button>
+    </div>
+
+    <div *ngIf="currentMeal.calories > 250 && currentMeal.calories <= 500" class="panel panel-default">
+      <div class="panel-heading">{{currentMeal.name}} Calories: {{currentMeal.calories}}</div>
+      <div class="panel-body">{{currentMeal.details}}</div>
+      <button class="edit-button"(click)="editButtonHasBeenClicked(currentMeal)">Edit!</button>
+    </div>
+
+    <div *ngIf="currentMeal.calories <= 250" class="panel panel-success">
+      <div class="panel-heading">{{currentMeal.name}} Calories: {{currentMeal.calories}}</div>
+      <div class="panel-body">{{currentMeal.details}}</div>
+      <button class="edit-button"(click)="editButtonHasBeenClicked(currentMeal)">Edit!</button>
+    </div>
   </div>
   `
 })
