@@ -5,17 +5,18 @@ import { Meal } from './meal.model';
   selector: 'new-meal',
   template: `
     <h1>New Meal</h1>
-    <div>
+    <hr>
+    <div class="form-group">
       <label>Enter Meal Name:</label>
-      <input #newName>
+      <input #newName class="form-control">
     </div>
     <div>
       <label>Enter Meal Details:</label>
-      <input #newDetails>
+      <input #newDetails class="form-control">
     </div>
     <div>
       <label>Enter Meal Calories:</label>
-      <input #newCalories>
+      <input #newCalories class="form-control">
     </div>
     <div>
       <button (click)="submitForm(newName.value, newDetails.value, newCalories.value); newName.value=''; newDetails.value=''; newCalories.value='';">Add</button>
