@@ -1,4 +1,4 @@
-import { Component, Output, EventEmitter } from '@angular/core';
+import { Component, Output, EventEmitter, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder } from '@angular/forms';
 import { Meal } from './meal.model';
 
@@ -10,15 +10,15 @@ import { Meal } from './meal.model';
     <form #newMealForm="ngForm" (ngSubmit)="submitForm(newMealForm.value)">
       <div class="form-group">
         <label>Enter Meal Name:</label>
-        <input type="text" class="form-control" placeholder="Your meal here" name="name" ngModel required>
+        <input class="form-control" type="text" placeholder="Your meal here" name="name" [(ngModel)]="meal.name" #name="ngModel" required>
       </div>
       <div class="form-group">
         <label>Enter Meal Details:</label>
-        <input #newDetails class="form-control" placeholder="Details about your meal" name="details"  ngModel required>
+        <input  class="form-control" placeholder="Details about your meal" name="details"  [(ngModel)]="meal.details" #details="ngModel" required>
       </div>
       <div class="form-group">
         <label>Enter Meal Calories:</label>
-        <input #newCalories class="form-control" placeholder="Calories" name="calories"  ngModel required>
+        <input type="number" min="0" class="form-control" placeholder="Calories" name="calories"  [(ngModel)]="meal.calories" #calories="ngModel" required>
       </div>
       <div class="form-group">
         <button type="submit" class="button btn-default">Submit</button>
@@ -27,11 +27,16 @@ import { Meal } from './meal.model';
   `
 })
 
-export class NewMealComponent {
-  // @Output() newMealSender = new EventEmitter();
+export class NewMealComponent implements OnInit {
+  @Output() newMealSender = new EventEmitter();
+  public meal: Meal;
 
-  submitForm(form: any): void{
-    console.log(form);
+  ngOnInit() {
+    this.meal = {name: '', details: '', calories: 0};
+  }
+
+  submitForm(model: Meal) {
+    this.newMealSender.emit(model);
   }
 
   // submitForm(name: string, details: string, calories: number) {
