@@ -40,7 +40,6 @@ export class AppComponent {
   let calories: number = 0;
     for(let meal of this.masterMealList) {
       calories += parseFloat(meal.calories.toString());
-      console.log(calories);
     }
     this.dailyCalories = calories;
     this.selectedMeal = null;
