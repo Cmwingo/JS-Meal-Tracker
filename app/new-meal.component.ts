@@ -8,7 +8,7 @@ import { Meal } from './meal.model';
     <hr>
     <div class="form-group">
       <label>Enter Meal Name:</label>
-      <input #newName class="form-control">
+      <input #newName class="form-control" required>
       <label>Enter Meal Details:</label>
       <input #newDetails class="form-control">
       <label>Enter Meal Calories:</label>
